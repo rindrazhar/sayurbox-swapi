@@ -3,6 +3,7 @@ import { useQuery } from "@apollo/client";
 import Image from "../assets/img/starwars-img.png";
 import "../assets/styles/index.css";
 import { GET_STARSHIPS } from "../ApolloClient/query";
+import { Link } from "react-router-dom";
 
 export default function Starships() {
   const { loading, error, data } = useQuery(GET_STARSHIPS);
@@ -17,13 +18,18 @@ export default function Starships() {
 
   return (
     <div className="container">
+      <h1>
+        Starships{" "}
+        <span className="total">({data.allStarships.totalCount})</span>
+      </h1>
       <div className="content">
         {data.allStarships.starships.map((res) => {
           return (
-            <div
+            <Link
               key={res.id}
-              to={`/starships/${res.id}`}
+              to={`/${res.id}`}
               className="card-wrapper"
+              style={{ textDecoration: "none" }}
             >
               <div className="card-img">
                 <img src={Image} alt="" width="300" />
@@ -31,7 +37,7 @@ export default function Starships() {
               <div className="card-title">
                 <h3>{res.name}</h3>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>

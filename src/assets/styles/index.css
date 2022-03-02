@@ -10,6 +10,10 @@
   margin: 0 auto;
 }
 
+.total {
+  color: yellow;
+}
+
 .card-img {
   display: flex;
   justify-content: center;
@@ -36,4 +40,51 @@
 .card-subtitle {
   font-size: 14px;
   margin-top: 15px;
+}
+
+.table-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.title {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.description {
+  text-transform: capitalize;
+}
+
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.table-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-back {
+  font-size: 100%;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: white;
+  border-radius: 4px;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  border: 0.3rem solid transparent;
+  touch-action: manipulation;
+  background: yellow;
+  cursor: pointer;
 }

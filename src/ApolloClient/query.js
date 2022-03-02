@@ -13,7 +13,7 @@ export const GET_STARSHIPS = gql`
 `;
 
 export const GET_STARSHIPS_DETAIL = gql`
-  query GetStarshipsDetail($id: ID!) {
+  query GetStarshipsDetail($id: ID) {
     starship(id: $id) {
       id
       name
