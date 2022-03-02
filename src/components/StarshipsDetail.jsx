@@ -94,7 +94,7 @@ export default function Starships() {
         <div className="pilots-title">
           <h3>Pilots</h3>
         </div>
-        <div className="pilots-subtitle">
+        <div className="pilots-wrapper">
           {data.starship.pilotConnection.pilots.map((res) => (
             <div key={res.id} className="movie-wrapper">
               <p>{res.name}</p>
@@ -106,7 +106,7 @@ export default function Starships() {
         <div className="films-title">
           <h3>Movie</h3>
         </div>
-        <div className="movie-subtitle">
+        <div className="movie-wrapper">
           {data.starship.filmConnection.films.map((res) => (
             <div key={res.id} className="movie-wrapper">
               <p>{res.title}</p>

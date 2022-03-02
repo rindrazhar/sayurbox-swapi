@@ -28,14 +28,15 @@ export default function Starships() {
             <Link
               key={res.id}
               to={`/${res.id}`}
-              className="card-wrapper"
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none", color: "#FFE81F" }}
             >
-              <div className="card-img">
-                <img src={Image} alt="" width="300" />
-              </div>
-              <div className="card-title">
-                <h3>{res.name}</h3>
+              <div className="card-wrapper">
+                <div className="card-img">
+                  <img src={Image} alt="" />
+                </div>
+                <div className="card-title">
+                  <h3>{res.name}</h3>
+                </div>
               </div>
             </Link>
           );
